@@ -1,25 +1,8 @@
-/** @type {import('next').NextConfig} */
-
-import webpack from "webpack";
+import { NextConfig } from "next";
 
 const nextConfig = {
+  /* config options here */
   reactStrictMode: true,
-  webpack: (config) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      path: false,
-    };
-
-    // ✅ Polyfill "global" for browser
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        global: require.resolve("global"),
-      })
-    );
-
-    return config;
-  },
 };
 
 export default nextConfig;
