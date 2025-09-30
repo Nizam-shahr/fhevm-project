@@ -1,22 +1,39 @@
 {
   "name": "frontend",
-  "version": "0.1.0", 
+  "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build --no-lint",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run"
   },
   "dependencies": {
-    "next": "13.5.6",
+    "@fhevm/solidity": "^0.3.0",
+    "@web3modal/wagmi": "^5.1.11",
+    "@zama-fhe/relayer-sdk": "^0.2.0",
+    "ethers": "^6.15.0",
+    "global": "^4.4.0",
+    "next": "14.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ethers": "^6.15.0"
+    "viem": "^2.37.9",
+    "wagmi": "^2.17.5"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0"
+    "@types/react-dom": "^18.0.0",
+    "@types/webpack": "^5.28.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.45.0",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "webpack": "^5.88.0"
   }
 }
